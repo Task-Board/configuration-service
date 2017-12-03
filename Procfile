@@ -1,1 +1,1 @@
-web: java --server.port=$PORT -jar target/configuration.jar
+web: java --server.port=$PORT
