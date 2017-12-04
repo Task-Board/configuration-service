@@ -1,5 +1,4 @@
 spring:
-  profiles: prod
   cloud:
     config:
       server:
@@ -17,16 +16,3 @@ eureka:
     healthCheckUrl: https://${DOMAIN_NAME}/health
     homePageUrl: https://${DOMAIN_NAME}/
   password: ${USER_PASSWORD:password}
-
----
-spring:
-  profiles: test
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/leoeberts/taskboards-configuration
-          force-pull: true
-
-name: test-YAML
-environment: test
