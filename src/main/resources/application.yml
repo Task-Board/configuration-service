@@ -1,8 +1,30 @@
-spring:
-  application:
-    name: configuration-service
-
 eureka:
   client:
-    healthcheck:
-      enabled: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URL:http://user:password@localhost:5000}/eureka/
+security:
+  user:
+    password: ${eureka.password}
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/leoeberts/taskboards-configuration
+  
+
+---
+spring:
+  profiles: heroku
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/leoeberts/taskboards-configuration
+
+eureka:
+  instance:
+    hostname: ${DOMAIN_NAME}
+    nonSecurePort: 80
+  password: ${USER_PASSWORD:password}
