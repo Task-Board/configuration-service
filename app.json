@@ -1,7 +1,7 @@
 {
-  "name": "Eureka Client",
-  "description": "Eureka Client demo project.",
-  "website": "https://github.com/kissaten/heroku-eureka-client-demo",
+  "name": "Configuration Service",
+  "description": "Centralized configuration service for Task Boards project.",
+  "website": "https://github.com/leoeberts/taskboards-configuration-service",
   "success_url": "/health",
   "env": {
     "EUREKA_URL": {
