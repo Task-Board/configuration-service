@@ -5,10 +5,7 @@ spring:
       server:
         git:
           uri: https://github.com/leoeberts/taskboards-configuration
-          force-pull: true   
-
-name: prod-YAML
-environment: production
+          force-pull: true
 
 eureka:
   instance:
