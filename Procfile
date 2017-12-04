@@ -1,1 +1,0 @@
-web: java --server.port=$PORT

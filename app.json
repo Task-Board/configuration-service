@@ -1,0 +1,14 @@
+{
+  "name": "Configuration Service",
+  "description": "Centralized configuration service for the Task Boards project.",
+  "website": "https://github.com/leoeberts/taskboards-configuration-service",
+  "success_url": "/health",
+  "env": {
+    "EUREKA_URL": {
+      "description": "URL of the Eureka Server in the form http://<user>:<password>@<host>"
+    },
+    "DOMAIN_NAME": {
+      "description": "The domain name of this app. For example: <appname>.herokuapp.com"
+    }
+  }
+}

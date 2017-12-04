@@ -1,0 +1,37 @@
+server:
+  port: ${PORT:8888}
+  
+spring:
+  application:
+    name: openwms-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/leoeberts/taskboards-configuration
+
+health:
+  config:
+    enabled: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URL:http://user:password@localhost:5000}/eureka/
+security:
+  user:
+    password: ${eureka.password}
+
+
+---
+spring:
+  profiles: heroku
+
+eureka:
+  instance:
+    hostname: ${DOMAIN_NAME}
+    nonSecurePort: 80
+  password: ${USER_PASSWORD:password}
+
+#TODO: bus: enabled:true
+#TODO: rabbitmq: host: localhost port: 5672
