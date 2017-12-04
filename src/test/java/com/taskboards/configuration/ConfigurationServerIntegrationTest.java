@@ -31,7 +31,7 @@ public class ConfigurationServerIntegrationTest {
     		      .andExpect(status().isOk())
     		      .andExpect(content()
     		      .contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
-    		      .andExpect(jsonPath("$.propertySources.[0].source.message", is("Working!")));
+    		      .andExpect(jsonPath("$.propertySources.[0].source.message", is("Working")));
     }
 	
 }

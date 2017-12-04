@@ -1,20 +1,3 @@
-eureka:
-  instance:
-    hostname: ${DOMAIN_NAME}
-    nonSecurePort: 80
-    secure-port-enabled: true
-    non-secure-port-enabled: false
-    statusPageUrl: https://${DOMAIN_NAME}/info
-    healthCheckUrl: https://${DOMAIN_NAME}/health
-    homePageUrl: https://${DOMAIN_NAME}/
-  password: ${USER_PASSWORD:password}
-  client:
-    serviceUrl:
-      defaultZone: ${EUREKA_URL:http://user:password@localhost:5000}/eureka/
-security:
-  user:
-    password: ${eureka.password}
-
 spring:
   cloud:
     config:
