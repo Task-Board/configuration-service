@@ -6,23 +6,9 @@ security:
   user:
     password: ${eureka.password}
 
-spring:
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/leoeberts/taskboards-configuration
-  
-
 ---
 spring:
   profiles: heroku
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/leoeberts/taskboards-configuration
-
 eureka:
   instance:
     hostname: ${DOMAIN_NAME}
