@@ -20,5 +20,5 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/leoeberts/taskboards-configuration
+          uri: https://github.com/Task-Board/configuration-files-repository
           force-pull: true
